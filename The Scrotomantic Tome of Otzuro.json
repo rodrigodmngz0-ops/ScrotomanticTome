@@ -1,0 +1,268 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "ScrotomanticTome",
+				"abbreviation": "STO",
+				"full": "The Scrotomantic Tome of Otzuro",
+				"version": "1"
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Escrotorrito",
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"source": "ScrotomanticTome",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 45
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 7,
+			"int": 16,
+			"wis": 13,
+			"cha": 22,
+			"passive": 11,
+			"cr": "1/2",
+			"senses": [
+				"truesight 60 ft."
+			],
+			"senseTags": [
+				"U"
+			],
+			"save": {
+				"int": "+5",
+				"cha": "+8"
+			},
+			"skill": {
+				"insight": "+3",
+				"performance": "+10"
+			},
+			"conditionImmune": [
+				"blinded",
+				"exhaustion"
+			],
+			"environment": [
+				"forest",
+				"urban"
+			],
+			"familiar": true,
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +1} to hit, reach 5 ft., one creature. {@h}1 ({@damage 1d4 - 1}) piercing damage, and the target must succeed on a {@dc 8} Wisdom saving throw against being magically {@condition charmed}."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"trait": [
+				{
+					"name": "Divine Awareness",
+					"entries": [
+						"The escrotorrito knows if it hears a lie."
+					]
+				}
+			],
+			"languages": [
+				"telepathy",
+				"Understands Common but can't speak"
+			],
+			"languageTags": [
+				"TP",
+				"C",
+				"CS"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"displayAs": "action",
+					"will": [
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Otzuro's Scrotus Tap|ScrotomanticTome}"
+					],
+					"constant": [
+						"{@spell Scrotal Resonance|ScrotomanticTome}"
+					],
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"fluff": {
+				"entries": [
+					"Discovered by Otzuro in his studies of scrotomancy, the Escrotorrito is a bird with wrinkled, shimmering plumage that vibrates in harmony with the scrotal folds of living creatures. Thanks to this resonance, it can detect distortions in spacetime and navigate cosmic folds as if they were air currents.",
+					"Escrotorritos are said to be guardians of temporal secrets, capable of warning travelers of impending paradoxes or guiding mages to lost artifacts."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://i.imgur.com/TifJALl.jpeg"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": "https://i.imgur.com/Lhq1amS.png"
+			},
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			]
+		}
+	],
+	"spell": [
+		{
+			"name": "Otzuro's Scrotus Tap",
+			"source": "ScrotomanticTome",
+			"level": 3,
+			"school": "D",
+			"time": [
+				{
+					"number": 0,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"By performing the ritual contact, the scrotomancer synchronizes the creature's biological wrinkles with the cosmic wrinkles of spacetime. This opens an ephemeral window into the Grand Plane of Time Folds, allowing the observation of key patterns in the creature's past and future.",
+				"The DM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn't account for circumstances that might change the answer, such as the casting of other spells."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "XPHB"
+						},
+						"subclass": {
+							"name": "Scrotomancy",
+							"shortName": "Scrotomancy",
+							"source": "XPHB"
+						}
+					}
+				]
+			},
+			"subschools": [
+				"Scrotomancy"
+			],
+			"races": [
+				{
+					"name": "Escrotorrito",
+					"source": "XPHB"
+				}
+			]
+		},
+		{
+			"name": "Scrotal Resonance",
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1,
+						"upTo": true
+					}
+				}
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Wizard",
+						"source": "XPHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "XPHB"
+						},
+						"subclass": {
+							"name": "Scrotomancy",
+							"shortName": "Scrotomancy",
+							"source": "XPHB"
+						}
+					}
+				]
+			},
+			"entries": [
+				"For the duration, you sense the presence of magical dfistortions such as visible vibrations in the air, temporal echoes, or energetic folds and rifts. you can also see creatures and objects that have the {@condition invisible} condition as if they were visible, and you can see into the Ethereal Plane"
+			],
+			"source": "ScrotomanticTome",
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "incense"
+			},
+			"subschools": [
+				"Scrotomancy"
+			]
+		}
+	]
+}
